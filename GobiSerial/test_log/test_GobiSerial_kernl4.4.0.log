@@ -1,0 +1,80 @@
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ lsusb
+Bus 002 Device 002: ID 2077:2004 Taicang T&W Electronics Co. Ltd
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ ls
+GobiSerial.c  GobiSerial.ko  GobiSerial.mod.c  GobiSerial.mod.o  GobiSerial.o  GobiSerial.o.ur-safe  Makefile  modules.order  Module.symvers  Readme.txt
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ make clean ;make
+rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions Module.* modules.order
+rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions Module.* modules.order
+make -C /lib/modules/4.4.0-148-generic/build SUBDIRS=/mnt/work/qiaoyk/GobiSerial modules
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-148-generic'
+  CC [M]  /mnt/work/qiaoyk/GobiSerial/GobiSerial.o
+/mnt/work/qiaoyk/GobiSerial/GobiSerial.c:240:2: warning: #warning "Assuming disc_mutex is locked external to the module" [-Wcpp]
+ #warning "Assuming disc_mutex is locked external to the module"
+  ^
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /mnt/work/qiaoyk/GobiSerial/GobiSerial.mod.o
+  LD [M]  /mnt/work/qiaoyk/GobiSerial/GobiSerial.ko
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-148-generic'
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ sudo modprobe usb
+usb3503             usbdux              usb_f_ecm_subset    usb_f_midi          usb_f_rndis         usb_f_uvc           usblcd              usbnet              usbtest             usb_wwan
+usb_8dev            usbduxfast          usb_f_eem           usb_f_ncm           usb_f_serial        usb_gigaset         usbled              usbserial           usbtmc
+usb8xxx             usbduxsigma         usb_f_fs            usb_f_obex          usb_f_ss_lb         usbip-core          usblp               usb-serial-simple   usbtouchscreen
+usbatm              usb_f_acm           usb_f_hid           usb_f_phonet        usb_f_uac1          usbip-host          usbmon              usbsevseg           usbtv
+usb_debug           usb_f_ecm           usb_f_mass_storage  usb_f_printer       usb_f_uac2          usbkbd              usbmouse            usb-storage         usbvision
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ sudo modprobe usbserial
+[sudo] password for qiaoyk:
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ sudo insmod ./GobiSerial.ko
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ ls /dev/ttyU*
+/dev/ttyUSB0  /dev/ttyUSB1  /dev/ttyUSB2  /dev/ttyUSB3
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ sudo apt-get install minicom
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  lrzsz
+The following NEW packages will be installed:
+  lrzsz minicom
+0 upgraded, 2 newly installed, 0 to remove and 1 not upgraded.
+Need to get 304 kB of archives.
+After this operation, 1,318 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-updates/universe lrzsz amd64 0.12.21-10~build0.14.04.1 [74.1 kB]
+Get:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ trusty-updates/universe minicom amd64 2.7-1+deb8u1build0.14.04.1 [230 kB]
+Fetched 304 kB in 12s (23.8 kB/s)
+Selecting previously unselected package lrzsz.
+(Reading database ... 268901 files and directories currently installed.)
+Preparing to unpack .../lrzsz_0.12.21-10~build0.14.04.1_amd64.deb ...
+Unpacking lrzsz (0.12.21-10~build0.14.04.1) ...
+Selecting previously unselected package minicom.
+Preparing to unpack .../minicom_2.7-1+deb8u1build0.14.04.1_amd64.deb ...
+Unpacking minicom (2.7-1+deb8u1build0.14.04.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up lrzsz (0.12.21-10~build0.14.04.1) ...
+Setting up minicom (2.7-1+deb8u1build0.14.04.1) ...
+qiaoyk@gwserver-ThinkCentre-M720t-N000:~/GobiSerial$ sudo minicom -s
+
+Welcome to minicom 2.7
+
+OPTIONS: I18n
+Compiled on Nov 15 2018, 20:20:04.
+Port /dev/ttyUSB1, 11:12:55
+
+Press CTRL-A Z for help on special keys
+
+at
+OK
+at+cops?
++cops: 0,0,"CHINA MOBILE",7
+
+OK
+at+cgdcont?
++CGDCONT: 1,"IPV4V6","","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,0
++CGDCONT: 2,"IPV4V6","ims","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,0
++CGDCONT: 3,"IPV4V6","CMNET","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,0
++CGDCONT: 4,"IPV4V6","CMWAP","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,0
++CGDCONT: 5,"IPV4V6","SOS","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,1
+
+OK
