@@ -136,7 +136,7 @@ Now enjoy the 4G/5G facilities
 
 ### use uqmi as application
 
-Clone qmi-wwan
+Get uqmi witch git clone
 ```
 git clone https://git.openwrt.org/project/uqmi.git
 ```
