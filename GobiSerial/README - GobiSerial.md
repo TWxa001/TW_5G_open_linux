@@ -44,9 +44,9 @@ usb serial device index and their function
 | ttyUSB1 | Modem |MI_01|2077:2004|
 | ttyUSB2 | Application |MI_02|2077:2004|
 | ttyUSB3 | Nmea |MI_03|2077:2004|
-Do note that the ttyUSB devce  maybe not start of ttyUSB0 if you have other USB serial device attached to system bus .
 
-- 
+Do note that :
+#### the ttyUSB devce  maybe not start of ttyUSB0 if you have other USB serial device attached to system bus .
 
 Now, it should run just fine!
 ```
