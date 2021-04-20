@@ -1,0 +1,47 @@
+libqmiwds_la-wireless_data_service_v01.lo: wireless_data_service_v01.c \
+ /usr/include/stdint.h /usr/include/features.h \
+ /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/wchar.h \
+ ../../sources/include/qmi_idl_lib_internal.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.3/include/stddef.h \
+ ../../sources/include/qmi_idl_lib.h /usr/include/setjmp.h \
+ /usr/include/bits/setjmp.h /usr/include/bits/sigset.h \
+ /usr/include/bits/setjmp2.h wireless_data_service_v01.h \
+ ../../sources/include/qmi_idl_lib.h ../../sources/include/common_v01.h
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/predefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/wchar.h:
+
+../../sources/include/qmi_idl_lib_internal.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.4.3/include/stddef.h:
+
+../../sources/include/qmi_idl_lib.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/setjmp2.h:
+
+wireless_data_service_v01.h:
+
+../../sources/include/qmi_idl_lib.h:
+
+../../sources/include/common_v01.h:
