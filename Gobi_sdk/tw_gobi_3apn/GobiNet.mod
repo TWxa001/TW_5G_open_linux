@@ -1,0 +1,2 @@
+/home/qiao/Documents/bm_gobi_3apn/GobiUSBNet.o /home/qiao/Documents/bm_gobi_3apn/QMIDevice.o /home/qiao/Documents/bm_gobi_3apn/QMI.o /home/qiao/Documents/bm_gobi_3apn/usbnet_2_6_32.o /home/qiao/Documents/bm_gobi_3apn/usbnet_3_0_6.o /home/qiao/Documents/bm_gobi_3apn/usbnet_2_6_35.o /home/qiao/Documents/bm_gobi_3apn/usbnet_3_10_21.o /home/qiao/Documents/bm_gobi_3apn/usbnet_3_12_xx.o /home/qiao/Documents/bm_gobi_3apn/usbnet_4_4_xx.o
+

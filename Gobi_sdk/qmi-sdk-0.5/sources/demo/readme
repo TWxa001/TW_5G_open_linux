@@ -1,0 +1,564 @@
+1.2015.05.22  add call end reason
+   wcdma tested ok 
+   cdma allways return 0x19
+
+2.2015.05.22 add dtmf send function
+  wcdma and cdma tested ok.
+
+3.2015.05.25 add nas CSFB function
+  UNICOM LTE tested ok.
+
+LOG:
+access to /dev/qcqmi0 ok, and initilize set indication request ok.
+.....access /dev/qcqmi1 failed.
+1.dail a number 18609284351 from handle0.
+11.dail a number 18609284351 from handle1.
+2.answer a call from handle0.
+22.answer a call from handle1..
+3.reject or end a call from handle0
+33.reject or end a call from handle1.
+4. hold the current call from handle0
+5. send a dtmf code (1) from handle0.
+-1.exit
+1
+encode_and_send(251) QMI_CCI_TX: cntl_flag - 00, txn_id - 0003, msg_id - 0020, msg_len - 0012
+xport_send(317) QMUXD: xport_send[7 -> 9]: 25 bytes on conn_id=0
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:9:7>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0001, msg_id - 002e, msg_len - 0023
+voice msg id 46
+voice event  QMI_VOICE_ALL_CALL_STATUS_IND_V02 ind
+current call status is CC_IN_PROGRESS.
+current call type is voice.
+current call direction is 1.
+current call id is 1.
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:9:7>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 02, txn_id - 0003, msg_id - 0020, msg_len - 000b
+reader_thread(84) QMUXD: select 7
+do voice call   successful.
+rc = 0
+1.dail a number 18609284351 from handle0.
+11.dail a number 18609284351 from handle1.
+2.answer a call from handle0.
+22.answer a call from handle1..
+3.reject or end a call from handle0
+33.reject or end a call from handle1.
+4. hold the current call from handle0
+5. send a dtmf code (1) from handle0.
+-1.exit
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:9:7>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0002, msg_id - 002e, msg_len - 0023
+voice msg id 46
+voice event  QMI_VOICE_ALL_CALL_STATUS_IND_V02 ind
+current call status is ORIGINATION.
+current call type is voice.
+current call direction is 1.
+current call id is 1.
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0001, msg_id - 0024, msg_len - 0012
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0002, msg_id - 0024, msg_len - 0012
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0003, msg_id - 0024, msg_len - 0012
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0004, msg_id - 0024, msg_len - 0012
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0005, msg_id - 0002, msg_len - 000a
+nas msg id 0x2
+nas event report ind
+rssi
+62
+5
+ecio
+3
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0006, msg_id - 0024, msg_len - 003a
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0007, msg_id - 0066, msg_len - 0008
+nas msg id 0x66
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0008, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0009, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 000a, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 000b, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 000c, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 000d, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 000e, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 000f, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+65
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:9:7>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0003, msg_id - 002e, msg_len - 0023
+voice msg id 46
+voice event  QMI_VOICE_ALL_CALL_STATUS_IND_V02 ind
+current call status is ALERTING.
+current call type is voice.
+current call direction is 1.
+current call id is 1.
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0010, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0011, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+72
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0012, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0013, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0014, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+66
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0015, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0016, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+69
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0017, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0018, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+67
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0019, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 001a, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+69
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 001b, msg_id - 0051, msg_len - 0011
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 001c, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+67
+5
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:9:7>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0004, msg_id - 002e, msg_len - 002a
+voice msg id 46
+voice event  QMI_VOICE_ALL_CALL_STATUS_IND_V02 ind
+current call status is DISCONNECTING.
+current call type is voice.
+current call direction is 1.
+current call id is 1.
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:9:7>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0005, msg_id - 002e, msg_len - 002a
+voice msg id 46
+voice event  QMI_VOICE_ALL_CALL_STATUS_IND_V02 ind
+current call status is END.
+current call type is voice.
+current call direction is 1.
+current call id is 1.
+the call id=1, end reason is :0x92, UNKNOWN...
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 001d, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 001e, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 001f, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:UMTS.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0020, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+77
+8
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0021, msg_id - 0024, msg_len - 0029
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0022, msg_id - 0066, msg_len - 0008
+nas msg id 0x66
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0023, msg_id - 0051, msg_len - 0014
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0024, msg_id - 0024, msg_len - 0012
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0025, msg_id - 0024, msg_len - 0012
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0026, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rsrp
+-109
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0027, msg_id - 0051, msg_len - 0014
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0028, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+75
+8
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 0029, msg_id - 0051, msg_len - 0014
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 002a, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+78
+8
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 002b, msg_id - 0051, msg_len - 0014
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 002c, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+74
+8
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 002d, msg_id - 0051, msg_len - 0014
+nas msg id 0x51
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 002e, msg_id - 0002, msg_len - 0005
+nas msg id 0x2
+nas event report ind
+rssi
+78
+8
+reader_thread(84) QMUXD: select 7
+reader_thread(86) QMUXD: got data
+reader_thread(106) QMUXD: reader_thread delivering broadcast message <0:3:6>
+qmi_cci_xport_recv(434) QMI_CCI_RX: cntl_flag - 04, txn_id - 002f, msg_id - 0024, msg_len - 0019
+nas msg id 0x24
+nas service ind
+service state:registered.
+cs attached state:attached.
+ps attached state:attached.
+current selected network is:3GPP.
+ radio nas 0 status:LTE.
+0
+0
+0
+0,0
+

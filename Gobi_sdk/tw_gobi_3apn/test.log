@@ -1,0 +1,182 @@
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# insmod ./GobiNet.ko 
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 4c:cc:6a:1c:a9:0e  
+          inet addr:192.168.3.199  Bcast:192.168.3.255  Mask:255.255.255.0
+          inet6 addr: fe80::4ecc:6aff:fe1c:a90e/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:22112 errors:0 dropped:4 overruns:0 frame:0
+          TX packets:414 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2016751 (2.0 MB)  TX bytes:43951 (43.9 KB)
+
+eth1      Link encap:Ethernet  HWaddr 3a:37:60:ec:0f:02  
+          inet6 addr: fe80::3837:60ff:feec:f02/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:44 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:10111 (10.1 KB)
+
+gobi-0-0  Link encap:Ethernet  HWaddr a6:3d:68:d2:56:ad  
+          NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+gobi-0-1  Link encap:Ethernet  HWaddr 4a:63:f3:8f:56:60  
+          NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+gobi-0-2  Link encap:Ethernet  HWaddr 6e:e2:75:1c:e6:9b  
+          NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:167 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:167 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:13930 (13.9 KB)  TX bytes:13930 (13.9 KB)
+
+You have new mail in /var/mail/root
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# udhcpc  -i gobi-0-2
+udhcpc (v1.21.1) started
+Sending discover...
+Sending select for 10.83.42.226...
+Lease of 10.83.42.226 obtained, lease time 7200
+/etc/udhcpc/default.script: Resetting default routes
+SIOCDELRT: No such process
+/etc/udhcpc/default.script: Adding DNS 211.137.130.2
+/etc/udhcpc/default.script: Adding DNS 211.137.130.4
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# 
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# udhcpc  -i gobi-0-1
+udhcpc (v1.21.1) started
+Sending discover...
+Sending select for 10.83.127.119...
+Lease of 10.83.127.119 obtained, lease time 7200
+/etc/udhcpc/default.script: Resetting default routes
+SIOCDELRT: No such process
+/etc/udhcpc/default.script: Adding DNS 211.137.130.2
+/etc/udhcpc/default.script: Adding DNS 211.137.130.4
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# udhcpc  -i gobi-0-0
+udhcpc (v1.21.1) started
+Sending discover...
+Sending select for 10.82.17.65...
+Lease of 10.82.17.65 obtained, lease time 7200
+/etc/udhcpc/default.script: Resetting default routes
+SIOCDELRT: No such process
+/etc/udhcpc/default.script: Adding DNS 211.137.130.2
+/etc/udhcpc/default.script: Adding DNS 211.137.130.4
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# ifconfig
+eth0      Link encap:Ethernet  HWaddr 4c:cc:6a:1c:a9:0e  
+          inet addr:192.168.3.199  Bcast:192.168.3.255  Mask:255.255.255.0
+          inet6 addr: fe80::4ecc:6aff:fe1c:a90e/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:22997 errors:0 dropped:4 overruns:0 frame:0
+          TX packets:436 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2092626 (2.0 MB)  TX bytes:45779 (45.7 KB)
+
+eth1      Link encap:Ethernet  HWaddr 3a:37:60:ec:0f:02  
+          inet6 addr: fe80::3837:60ff:feec:f02/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:6 dropped:0 overruns:0 frame:0
+          TX packets:151 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:33846 (33.8 KB)
+
+gobi-0-0  Link encap:Ethernet  HWaddr a6:3d:68:d2:56:ad  
+          inet addr:10.82.17.65  Mask:255.255.255.252
+          inet6 addr: fe80::a43d:68ff:fed2:56ad/64 Scope:Link
+          UP RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:4 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1224 (1.2 KB)  TX bytes:6178 (6.1 KB)
+
+gobi-0-1  Link encap:Ethernet  HWaddr 4a:63:f3:8f:56:60  
+          inet addr:10.83.127.119  Mask:255.255.255.240
+          inet6 addr: fe80::4863:f3ff:fe8f:5660/64 Scope:Link
+          UP RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:4 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:36 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1224 (1.2 KB)  TX bytes:8134 (8.1 KB)
+
+gobi-0-2  Link encap:Ethernet  HWaddr 6e:e2:75:1c:e6:9b  
+          inet addr:10.83.42.226  Mask:255.255.255.252
+          inet6 addr: fe80::6ce2:75ff:fe1c:e69b/64 Scope:Link
+          UP RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:4 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1224 (1.2 KB)  TX bytes:8104 (8.1 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:167 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:167 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:13930 (13.9 KB)  TX bytes:13930 (13.9 KB)
+
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# ping 114.114.114.114 -I gobi-0-2
+PING 114.114.114.114 (114.114.114.114) from 10.83.42.226 gobi-0-2: 56(84) bytes of data.
+^C
+--- 114.114.114.114 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2015ms
+
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# ping 114.114.114.114 -I gobi-0-0
+PING 114.114.114.114 (114.114.114.114) from 10.82.17.65 gobi-0-0: 56(84) bytes of data.
+64 bytes from 114.114.114.114: icmp_seq=1 ttl=65 time=76.5 ms
+64 bytes from 114.114.114.114: icmp_seq=2 ttl=78 time=87.7 ms
+^C
+--- 114.114.114.114 ping statistics ---
+3 packets transmitted, 2 received, 33% packet loss, time 2003ms
+rtt min/avg/max/mdev = 76.552/82.155/87.758/5.603 ms
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# udhcpc  -i gobi-0-1
+udhcpc (v1.21.1) started
+Sending discover...
+Sending select for 10.83.127.119...
+Lease of 10.83.127.119 obtained, lease time 7200
+/etc/udhcpc/default.script: Resetting default routes
+SIOCDELRT: No such process
+/etc/udhcpc/default.script: Adding DNS 211.137.130.2
+/etc/udhcpc/default.script: Adding DNS 211.137.130.4
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# ping 114.114.114.114 -I gobi-0-1
+PING 114.114.114.114 (114.114.114.114) from 10.83.127.119 gobi-0-1: 56(84) bytes of data.
+64 bytes from 114.114.114.114: icmp_seq=1 ttl=84 time=88.7 ms
+64 bytes from 114.114.114.114: icmp_seq=2 ttl=78 time=89.9 ms
+^C
+--- 114.114.114.114 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 88.730/89.362/89.994/0.632 ms
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# udhcpc  -i gobi-0-2
+udhcpc (v1.21.1) started
+Sending discover...
+Sending select for 10.83.42.226...
+Lease of 10.83.42.226 obtained, lease time 7200
+/etc/udhcpc/default.script: Resetting default routes
+SIOCDELRT: No such process
+/etc/udhcpc/default.script: Adding DNS 211.137.130.2
+/etc/udhcpc/default.script: Adding DNS 211.137.130.4
+root@server-YangTianM4900c-00:/media/server/c7e77fa2-b911-460d-978c-b7d3f8da95901/qiao_work/svn/bm_gobi_3apn# ping 114.114.114.114 -I gobi-0-2
+PING 114.114.114.114 (114.114.114.114) from 10.83.42.226 gobi-0-2: 56(84) bytes of data.
+64 bytes from 114.114.114.114: icmp_seq=1 ttl=81 time=79.0 ms
+64 bytes from 114.114.114.114: icmp_seq=2 ttl=71 time=94.6 ms
+64 bytes from 114.114.114.114: icmp_seq=3 ttl=83 time=94.0 ms
+^C
+--- 114.114.114.114 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 79.054/89.255/94.696/7.227 ms
+
